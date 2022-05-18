@@ -1,0 +1,16 @@
+/** @type {import('@jest/types').Config.InitialOptions} */
+module.exports = {
+  displayName:'demo',
+  preset:'ts-jest',
+  testEnvironment:'jsdom',
+  testMatch:["**/tests-demos/**/*.(spec|test).[jt]s?(x)"],
+  rootDir:'./',
+  transform:{
+    '^.*\\.(tsx?|js)$': 'ts-jest',
+  },
+  "transformIgnorePatterns": ['node_modules/(?!(@arcgis|@esri|@stencil|@popperjs)/)'],
+  setupFiles: ['./jest.setup.js'],
+  moduleFileExtensions: ['json', 'js', 'jsx', 'ts', 'tsx', 'vue'],
+  // globalSetup:"<rootDir>/setup.js",
+  // globalTeardown:"<rootDir>/teardown.js",
+};
